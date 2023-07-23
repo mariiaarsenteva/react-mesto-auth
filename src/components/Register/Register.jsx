@@ -1,5 +1,5 @@
 import useFormValidation from "../../utils/useFormValidation/useFormValidation";
-import SectionLogin from "../SectionLogin/SectionLogin";
+import AuthPage from "../AuthPage/AuthPage.jsx";
 import React from "react";
 
 export default function Register ({name, handleRegister}){
@@ -12,8 +12,8 @@ export default function Register ({name, handleRegister}){
 
     return(
         <div className="register">
-            <SectionLogin name={name} onSubmit={onRegister} isValid={isValid}>
-            <>
+            <AuthPage name={name} onSubmit={onRegister} isValid={isValid}>
+            
             <input
             className={`login__input ${isInputValid === undefined || isInputValid ? '' : 'popup__input_invalid'}`}
             name='email'
@@ -24,9 +24,7 @@ export default function Register ({name, handleRegister}){
             error={errors.email}
           />
         <span className={'login__error'}>{errors.email}</span>
-      </>
-      
-      <>
+  
         <input
           className={`login__input ${isInputValid === undefined || isInputValid ? '' : 'popup__input_invalid'}`}
           name='password'
@@ -38,9 +36,9 @@ export default function Register ({name, handleRegister}){
           error={errors.password}
         />
         <span className={'login__error'}>{errors.password}</span>
-      </>
+ 
 
-            </SectionLogin>
+            </AuthPage>
 
         </div>
     )

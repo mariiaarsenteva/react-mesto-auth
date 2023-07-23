@@ -1,7 +1,7 @@
 import Footer from "./Footer/Footer.jsx";
 import Header from "./Header/Header.jsx";
 import ImagePopup from "./ImagePopup/ImagePopup.jsx";
-import Main from "./Main/Main.jsx";
+// import Main from "./Main/Main.jsx";
 import PopupWithForm from "./PopupWithForm/PopupWithForm.jsx";
 import { useCallback, useState, useEffect } from "react";
 import CurrentUserContext from "../../src/contexts/CurrentUserContext.js";
@@ -17,6 +17,8 @@ import { authorization, registration, getUserData } from "../utils/auth.js";
 import InfoTooltip from "./InfoTooltip/InfoTooltip.jsx";
 import DeletePopup from "./DeletePopup/DeletePopup.jsx";
 import React from "react";
+import Register from './Register/Register.jsx'
+import Login from './Login/Login.jsx'
 
 export default function App() {
   const navigate = useNavigate();
@@ -277,7 +279,7 @@ export default function App() {
               element={
                 <>
                   <Header name="signup" />
-                  <Main name="signup" handleRegister={handleRegister} />
+                  <Register  handleRegister={handleRegister} />
                 </>
               }
             />
@@ -286,7 +288,7 @@ export default function App() {
               element={
                 <>
                   <Header name="signin" />
-                  <Main name="signin" handleLogin={handleLogin} />
+                  <Login  handleLogin={handleLogin} />
                 </>
               }
             />

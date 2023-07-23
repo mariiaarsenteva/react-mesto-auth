@@ -13,7 +13,7 @@ export default function EditProfilePopup({isOpen, onClose, onUpdateUser, isSend}
 useEffect(()=>{
     setValue('name', currentUser.name)
     setValue('job', currentUser.about)
-},[currentUser,setValue])
+},[currentUser,isOpen])
 
 
 function resetClose(){

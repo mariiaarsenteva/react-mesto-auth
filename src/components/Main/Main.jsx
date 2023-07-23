@@ -2,8 +2,7 @@ import { memo, useContext } from "react";
 import Card from "../Card/Card.jsx";
 import CurrentUserContext from "../../contexts/CurrentUserContext";
 import Loader from "../Loader/Loader.jsx";
-import Register from '../Register/Register.jsx'
-import Login from '../Login/Login.jsx'
+
 import React from "react";
 
  const Main = memo(({
@@ -24,8 +23,7 @@ import React from "react";
 
   return (
     <main className="main">
-      {name === "main" ?   
-      <>
+      
       <section className="profile">
         <div className="profile__container">
           <button
@@ -80,15 +78,8 @@ import React from "react";
           )}
         </ul>
       </section>
-      </>
-        :
-        name === 'signup'?
-
-        <Register name={name} handleRegister={handleRegister}/>
-        :
-
-        <Login name={name} handleLogin={handleLogin}/>
-          }
+      
+  
     </main>
   )})
 

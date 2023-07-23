@@ -9,7 +9,7 @@ export default function Card({ card, onCardClick, onDelete }) {
   const isOwn = card.owner._id === currentUser._id;
 
   return (
-    <>
+    
       <div> {isOwn &&
         <button
           className='elements__delete-button button'
@@ -31,6 +31,6 @@ export default function Card({ card, onCardClick, onDelete }) {
           </div>
         </div>
       </div>
-    </>
+    
   )
 }

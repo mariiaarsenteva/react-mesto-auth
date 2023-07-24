@@ -141,7 +141,8 @@ export default function App() {
     [closePopup]
   );
 
-  const handleSubmitDeletion = useCallback(() => {
+  const handleSubmitDeletion = useCallback((evt) => {
+    evt.preventDefault()
     function makeRequest() {
       return api.removeCard(deleteCard).then(() => {
         setCards(

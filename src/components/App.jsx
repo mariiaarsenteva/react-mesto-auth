@@ -280,7 +280,7 @@ export default function App() {
               element={
                 <>
                   <Header name="signup" />
-                  <Register  handleRegister={handleRegister} />
+                  <Register name="signup" handleRegister={handleRegister} />
                 </>
               }
             />
@@ -289,7 +289,7 @@ export default function App() {
               element={
                 <>
                   <Header name="signin" />
-                  <Login  handleLogin={handleLogin} />
+                  <Login  name="signin" handleLogin={handleLogin} />
                 </>
               }
             />

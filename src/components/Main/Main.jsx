@@ -13,9 +13,6 @@ import React from "react";
   onDelete,
   cards,
   isLoading,
-  handleRegister,
-  handleLogin,
-  name,
   onCardLike
 }) => {
   

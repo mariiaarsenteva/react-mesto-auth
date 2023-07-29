@@ -12,7 +12,14 @@
 
 @media screen and (max-width: 800px) {
   .header__email {
-   
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__email {
+    margin-right: 0;
+    text-align: center;
+    line-height: 22px; /* 122.222% */
   }
 }
